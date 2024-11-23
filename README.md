@@ -1,4 +1,4 @@
-## 📋 Todo App
+## 📋 Tarefas App
 
 Este é um projeto simples de gerenciamento de tarefas desenvolvido com **React.js**. Ele permite que os usuários criem, visualizem, atualizem e excluam tarefas, com funcionalidades como marcar uma tarefa como concluída e exibir a duração estimada de cada tarefa.
 
