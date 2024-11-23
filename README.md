@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+## 📋 Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto simples de gerenciamento de tarefas desenvolvido com **React.js**. Ele permite que os usuários criem, visualizem, atualizem e excluam tarefas, com funcionalidades como marcar uma tarefa como concluída e exibir a duração estimada de cada tarefa.
 
-## Available Scripts
+![Interface do App](public/interface-app.png)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### 🛠️ **Funcionalidades**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Adicionar tarefas:** Insira um título e uma duração para criar novas tarefas.
+- **Marcar como concluída:** Altere o status de uma tarefa entre "pendente" e "concluída".
+- **Excluir tarefas:** Remova tarefas que não são mais necessárias.
+- **Carregamento dinâmico:** Lista inicial de tarefas é carregada de uma API simulada.
+- **Interface amigável:** Design responsivo com ícones interativos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### 🖥️ **Como executar o projeto**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### **Pré-requisitos**
+- **Node.js** (versão 14 ou superior)
+- **npm** ou **yarn**
+- Um servidor rodando na porta `5000` com uma API REST básica (como [JSON Server](https://github.com/typicode/json-server)).
 
-### `npm run build`
+#### **Passos para execução**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/salazarleo/ListReact
+   cd ListReact
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Instale as dependências**
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Inicie o servidor da API**
+   Certifique-se de que um servidor como o `JSON Server` esteja rodando na porta `5000`:
+   ```bash
+   npx json-server --watch data/db.json --port 5000
+   ```
 
-### `npm run eject`
+4. **Inicie o projeto React**
+   ```bash
+   npm start
+   # ou
+   yarn start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Acesse o app em [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🗂️ **Estrutura de arquivos**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```plaintext
+src/
+├── App.css            # Estilos do aplicativo
+├── App.js             # Componente principal do aplicativo
+├── index.js           # Ponto de entrada do React
+└── ...
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🧩 **Principais Componentes**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **`App.js`**
+   - Gerencia o estado global das tarefas (`todos`).
+   - Realiza chamadas para a API para criar, atualizar e deletar tarefas.
+   - Renderiza a interface para interagir com as tarefas.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 📦 **Dependências**
 
-### Analyzing the Bundle Size
+- **React.js:** Biblioteca principal para construção da interface.
+- **react-icons:** Fornece ícones interativos para melhor usabilidade.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### ⚙️ **Detalhes técnicos**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Gerenciamento de estado**
+   - Os estados principais são:
+     - `title` e `time`: Capturam os inputs do formulário.
+     - `todos`: Contém a lista de tarefas.
+     - `loading`: Indica quando os dados estão sendo carregados.
 
-### Advanced Configuration
+2. **Comunicação com API**
+   - **GET:** Carrega todas as tarefas.
+   - **POST:** Adiciona uma nova tarefa.
+   - **PUT:** Atualiza o status de uma tarefa (concluído/não concluído).
+   - **DELETE:** Remove uma tarefa pelo ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. **Estilização**
+   - O arquivo `App.css` é responsável por todos os estilos. Ele define classes como `todo`, `todo-done` e `actions`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### ✨ **Funcionalidades em Destaque**
 
-### `npm run build` fails to minify
+- **Ícones dinâmicos:** Os ícones mudam dinamicamente dependendo do status da tarefa (`BsBookmarkCheck` e `BsBookmarkCheckFill`).
+- **Feedback visual:** Exibe mensagens quando não há tarefas cadastradas ou quando uma tarefa é marcada como concluída.
+- **Prevenção de erros:** Validações como valores obrigatórios em formulários e verificação de resposta da API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### 🖼️ **Imagens**
+
+#### Tela Inicial
+- Lista de tarefas (vazia ou preenchida):
+  ![Exemplo de lista de tarefas preenchida ou vazia](https://via.placeholder.com/800x400?text=Exemplo+de+lista+de+tarefas)
+
+#### Adicionar Tarefa
+- Formulário de adição:
+  ![Exemplo de formulário de adição](https://via.placeholder.com/800x400?text=Formulário+de+adição)
+
+---
+
+### 📌 **Próximos passos**
+
+- Implementar autenticação de usuários.
+- Adicionar suporte a datas e deadlines para as tarefas.
+- Melhorar a estilização com bibliotecas como **Bootstrap** ou **TailwindCSS**.
+- Adicionar persistência com um banco de dados real, como Firebase ou MongoDB.
+
+---
+
+**Feito com 💙 por [Leonardo Salazar](https://github.com/salazarleo)**

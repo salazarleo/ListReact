@@ -1,4 +1,7 @@
 {
+
+  "dependencies": {
+  "react-icons": "^5.3.0",
   "name": "todo",
   "version": "0.1.0",
   "private": true,
@@ -39,5 +42,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+>>>>>>> 6216981c013f31b470a97205d6ac37a55a41a97f
   }
 }
