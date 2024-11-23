@@ -2,6 +2,8 @@
 
 Este é um projeto simples de gerenciamento de tarefas desenvolvido com **React.js**. Ele permite que os usuários criem, visualizem, atualizem e excluam tarefas, com funcionalidades como marcar uma tarefa como concluída e exibir a duração estimada de cada tarefa.
 
+![Interface do App](public/interface-app.png)
+
 ---
 
 ### 🛠️ **Funcionalidades**
@@ -25,8 +27,8 @@ Este é um projeto simples de gerenciamento de tarefas desenvolvido com **React.
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/salazarleo/ListReact
+   cd ListReact
    ```
 
 2. **Instale as dependências**
