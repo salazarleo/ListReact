@@ -109,12 +109,6 @@ src/
 - **Feedback visual:** Exibe mensagens quando não há tarefas cadastradas ou quando uma tarefa é marcada como concluída.
 - **Prevenção de erros:** Validações como valores obrigatórios em formulários e verificação de resposta da API.
 
----
-
-
-#### Adicionar Tarefa
-- Formulário de adição:
-  ![Exemplo de formulário de adição](https://via.placeholder.com/800x400?text=Formulário+de+adição)
 
 ---
 
