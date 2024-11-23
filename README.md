@@ -2,6 +2,9 @@
 
 Este é um projeto simples de gerenciamento de tarefas desenvolvido com **React.js**. Ele permite que os usuários criem, visualizem, atualizem e excluam tarefas, com funcionalidades como marcar uma tarefa como concluída e exibir a duração estimada de cada tarefa.
 
+### 🖼️ **Imagens**
+
+#### Tela Inicial
 ![Interface do App](public/interface-app.png)
 
 ---
@@ -110,11 +113,6 @@ src/
 
 ---
 
-### 🖼️ **Imagens**
-
-#### Tela Inicial
-- Lista de tarefas (vazia ou preenchida):
-  ![Exemplo de lista de tarefas preenchida ou vazia](https://via.placeholder.com/800x400?text=Exemplo+de+lista+de+tarefas)
 
 #### Adicionar Tarefa
 - Formulário de adição:
